@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  app:
+    image: golang:1.16-alpine
+    volumes:
+      - .:/go/src/anagramm
+    working_dir: /go/src/anagramm/cmd
+    command: go run main.go
+    ports:
+      - "8080:8080"
